@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+@import './vue-select.css';
+@plugin "daisyui" {
+  themes: lofi, forest;
+}
+
+/* Fonte Segoe UI */
+@layer base {
+  * {
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI Variable Display',
+      'Segoe UI',
+      Helvetica,
+      'Apple Color Emoji',
+      Arial,
+      sans-serif,
+      'Segoe UI Emoji',
+      'Segoe UI Symbol';
+  }
+}
+
+/* Removendo  */
+@layer base {
+  .input:focus-within {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .textarea:focus-within {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .select:focus-within {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+/* Fix VueSelect alignment with DaisyUI */
+:root {
+  --vs-border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+  --vs-border-radius: var(--rounded-btn, 0.5rem);
+  --vs-dropdown-bg: var(--fallback-b1,oklch(var(--b1)/1));
+  --vs-dropdown-color: inherit;
+  --vs-search-input-color: inherit;
+}
+
+.v-select .vs__dropdown-toggle {
+  height: 2rem;
+  min-height: 2rem; /* Matches input-sm */
+  padding-bottom: 0;
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+  border-radius: var(--rounded-btn, 0.5rem);
+  background-color: var(--fallback-b1,oklch(var(--b1)/1));
+}
+
+.v-select .vs__selected-options {
+  align-items: center;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.v-select .vs__selected {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  width: calc(100% - 10px);
+  white-space: nowrap;
+}
+
+.v-select .vs__search, 
+.v-select .vs__search:focus {
+  margin: 0;
+  padding: 0 8px;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+}
+
+.v-select.vs--single.vs--open .vs__selected {
+  opacity: 0.4;
+}
+
+.v-select .vs__dropdown-menu {
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+  border-radius: var(--rounded-box, 1rem);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 4px;
+}
+
+.v-select .vs__dropdown-option {
+  padding: 8px 12px;
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+
+.v-select .vs__dropdown-option--highlight {
+  background-color: var(--fallback-b2,oklch(var(--b2)/1));
+  color: inherit;
+}

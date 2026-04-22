@@ -1,0 +1,84 @@
+html[data-theme='forest'] .vs__dropdown-toggle {
+  border-radius: 32px;
+  background-color: oklch(var(--b2)) !important;
+  border-color: oklch(0.2084 0.008 17.911) !important;
+}
+
+html[data-theme='forest'] .vs__dropdown-menu {
+  border-radius: 32px;
+  margin-top: 2px;
+  background-color: oklch(0.2084 0.008 17.911) !important;
+}
+
+html[data-theme='forest'] .vs__dropdown-option--highlight {
+  color: inherit !important; /* Mantém a cor do texto original */
+}
+
+.vs__dropdown-toggle {
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 0 !important;
+  background-color: oklch(1 0 0) !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+.vs__search,
+.vs__selected-options {
+  padding: 4px 8px !important;
+  margin: 0 !important;
+}
+
+.vs__selected-options {
+  flex: 1 !important;
+}
+
+.vs__search {
+  font-size: 12px !important;
+  line-height: 24px !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.vs__selected {
+  margin: 2px !important;
+  padding: 2px 6px !important;
+  line-height: 1.2 !important;
+}
+
+.vs__no-options {
+  font-size: 12px !important;
+  padding: 5px 0px !important;
+}
+
+.vs__actions {
+  padding: 4px 6px !important;
+}
+
+.vs__dropdown-menu {
+  padding: 0px !important;
+  background-color: oklch(1 0 0) !important;
+}
+
+.vs__dropdown-option--highlight {
+  background-color: var(--color-base-200) !important;
+  color: black !important;
+}
+
+.vs--open .vs__open-indicator {
+  transform: none;
+}
+
+/* Ajusta o posicionamento da nossa nova seta */
+.custom-caret {
+  margin-right: 10px;
+  pointer-events: none; /* Garante que o clique passe para o componente */
+}
+
+/* Opcional: Ajustar a borda do vue-select para bater com os da direita */
+.vs__dropdown-toggle {
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+  min-height: 50px; /* Ajuste conforme a altura dos seus inputs da direita */
+}
